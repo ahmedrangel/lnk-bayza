@@ -1,0 +1,19 @@
+DirectoryIndex index.php
+Options -Indexes
+DirectorySlash Off
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)/$ /$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule (.*)/$ /$1 [NC,L]
+
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule (.*) $1.html [L]
+
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule (.*) $1.php [L]
+
+RewriteCond %{REQUEST_URI} !/(index\.php)?$
+RewriteRule ^([^/]*)$ /links/$1 [NC,L]
