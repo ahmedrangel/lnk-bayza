@@ -3,7 +3,7 @@ layout: fanlink
 
 title: Looking At You
 artists: Bayza
-link: looking-at-you
+link: LookingAtYou
 date: 2021-02-12 00:00:00
 
 image: http://bayzamusic.com/images/releases/2021/looking-at-you.jpg

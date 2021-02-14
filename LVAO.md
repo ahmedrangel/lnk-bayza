@@ -3,7 +3,7 @@ layout: fanlink
 
 title: Lo Vas A Olvidar (Bayza Remix)
 artists: Billie Eilish, ROSALÍA
-link: lo-vas-a-olvidar
+link: LVAO
 date: 2021-01-22 00:00:00
 
 image: http://bayzamusic.com/images/releases/2021/lo-vas-a-olvidar.jpg
