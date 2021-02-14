@@ -1,5 +1,5 @@
 ---
-layout: fanlink_list
+layout: index
 title: Bayza's Fanlinks
 description: Bayza fanlinks for stream, buy or download music.
 link: fanlinks
