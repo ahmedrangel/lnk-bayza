@@ -24,5 +24,5 @@ beatport:
 yandex:
 bandcamp: https://bayza.bandcamp.com/track/still-learning-bayza-remix
 
-dark: false
+dark: true
 ---
