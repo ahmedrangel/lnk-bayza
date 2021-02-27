@@ -24,5 +24,5 @@ beatport:
 yandex:
 bandcamp: https://bayza.bandcamp.com/track/strawberry-shortcake-bayza-remix
 
-dark: false
+dark: true
 ---
