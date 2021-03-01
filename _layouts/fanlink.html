@@ -47,6 +47,8 @@
               <div class="col-lg-12">
                 <!-- cover -->
                 <img class="img-fluid mx-auto d-block img-select-none" src="{{ page.image_secure }}" width="100%">
+                <!-- copy to clipboard -->
+                <div class="copy-to-clipboard" data-toggle="tooltip" data-placement="leftC" title="Copy to clipboard"><i class="fas fa-copy" aria-hidden="true"></i></div>
                 <!-- titulo -->
                 <div class="p-3">
                   <div class="text-center">
@@ -325,5 +327,10 @@
     <script src="https://kit.fontawesome.com/cc91b92ca8.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="https://bayzamusic.com/js/tema.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
   </body>
 </html>
