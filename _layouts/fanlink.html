@@ -48,7 +48,9 @@
                 <!-- cover -->
                 <img class="img-fluid mx-auto d-block img-select-none" src="{{ page.image_secure }}" width="100%">
                 <!-- copy to clipboard -->
-                <!-- <div class="copy-to-clipboard" data-toggle="tooltip" data-placement="left" title="Copy to clipboard"><i class="fas fa-copy" aria-hidden="true"></i></div> -->
+                <div id="copy-to-clipboard" class="copy-to-clipboard" data-toggle="tooltip" data-placement="left" title="Copy to clipboard" onclick="CopyToClipboard();" value="https://lnk.bayza.ml/{{ page.link }}">
+                  <i id="clipboard" class="fas fa-copy" aria-hidden="true" data-toggle="tooltip-copied" data-placement="bottom"></i>
+                </div>
                 <!-- titulo -->
                 <div class="p-3">
                   <div class="text-center">
@@ -319,6 +321,11 @@
                 display: flex!important;
             }
           }
+          .fa-check {
+            position: absolute;
+            top: 0;
+            left: 0%;
+          }
         </style>
       </div>
     </div>
@@ -329,8 +336,33 @@
     <script src="https://bayzamusic.com/js/tema.js"></script>
     <script>
       $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
+        $("[data-toggle='tooltip']").tooltip();
+        $(".copy-to-clipboard").click(function(){
+          document.getElementById('copy-to-clipboard').style.opacity = "1";
+          $('#clipboard').html('<i id="copied-check" class="fas fa-check text-success" aria-hidden="true"></i>');
+          $("[data-toggle='tooltip']").tooltip('dispose');
+          $("[data-toggle='tooltip-copied']").attr('data-original-title', "Copied!").tooltip({trigger: 'manual'}).tooltip('show');
+          $(document).mouseup(function(e) {
+            var container = $("#copied-check")
+          if (!container.is(e.target) && container.has(e.target).length == 0) {
+            $("[data-toggle='tooltip']").tooltip();
+            $("[data-toggle='tooltip-copied']").tooltip('dispose');
+            document.getElementById('copy-to-clipboard').style.opacity = "50%";
+            container.hide();
+          }
+        });
+        });
       });
+
+      function CopyToClipboard() {  
+        var dummy = document.createElement('input'),
+        text = window.location.href;
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+      }
     </script>
   </body>
 </html>
