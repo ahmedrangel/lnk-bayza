@@ -21,7 +21,7 @@ tidal: https://tidal.com/browse/album/174130575
 tidal-buy: https://store.tidal.com/us/album/174130575
 download: https://www.toneden.io/bayza/post/without-you
 tiktok: https://vm.tiktok.com/ZMermEXNJ
-beatport:
+beatport: https://www.beatport.com/track/without-you/14942522
 yandex: https://music.yandex.com/album/13955690
 bandcamp: https://bayza.bandcamp.com/track/without-you
 dark: false
