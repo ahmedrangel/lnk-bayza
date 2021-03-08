@@ -153,17 +153,6 @@
                     <span class="btn btn-outline-light">Buy</span>
                   </a>
                 </div>
-              </div>{% endif %}{% if page.bandcamp %}
-              <!-- bandcamp-->
-              <div class="row links">
-                <div class="col-6 pl-5 py-3">
-                  <img class="mx-auto d-block" src="https://bayzamusic.com/images/bandcamp.png" width="100%"/>
-                </div>
-                <div class="col-6 pr-4 py-3 text-center my-auto">
-                  <a class="text-white" href="{{ page.bandcamp }}" target="_blank" title="Buy on Bandcamp">
-                    <span class="btn btn-outline-light">Buy</span>
-                  </a>
-                </div>
               </div>{% endif %}{% if page.deezer %}
               <!-- deezer -->
               <div class="row links">
@@ -173,6 +162,17 @@
                 <div class="col-6 pr-4 py-3 text-center my-auto">
                   <a class="text-white" href="{{ page.deezer }}" target="_blank" title="Stream on Deezer">
                     <span class="btn btn-outline-light">Stream</span>
+                  </a>
+                </div>
+              </div>{% endif %}{% if page.bandcamp %}
+              <!-- bandcamp-->
+              <div class="row links">
+                <div class="col-6 pl-5 py-3">
+                  <img class="mx-auto d-block" src="https://bayzamusic.com/images/bandcamp.png" width="100%"/>
+                </div>
+                <div class="col-6 pr-4 py-3 text-center my-auto">
+                  <a class="text-white" href="{{ page.bandcamp }}" target="_blank" title="Buy on Bandcamp">
+                    <span class="btn btn-outline-light">Buy</span>
                   </a>
                 </div>
               </div>{% endif %}{% if page.amazon-music %}
