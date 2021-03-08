@@ -23,6 +23,6 @@ download:
 tiktok: https://vm.tiktok.com/ZMermEXNJ
 beatport:
 yandex: https://music.yandex.com/album/13955690
-bandcamp:
+bandcamp: https://bayza.bandcamp.com/track/without-you
 dark: false
 ---
