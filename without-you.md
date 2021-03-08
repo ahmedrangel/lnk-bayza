@@ -19,7 +19,7 @@ amazon: https://www.amazon.com/Without-You-Bayza/dp/B08WWQ76R7
 deezer: https://www.deezer.com/en/album/208688602
 tidal: https://tidal.com/browse/album/174130575
 tidal-buy: https://store.tidal.com/us/album/174130575
-download:
+download: https://www.toneden.io/bayza/post/without-you
 tiktok: https://vm.tiktok.com/ZMermEXNJ
 beatport:
 yandex: https://music.yandex.com/album/13955690
