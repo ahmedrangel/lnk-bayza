@@ -7,7 +7,7 @@ link: without-you
 date: 2021-03-08 00:00:00
 
 image: http://bayzamusic.com/images/releases/2021/without-you.jpg
-image_secure: https://bayzamusic.com/images/releases/2021/without-at-you.jpg
+image_secure: https://bayzamusic.com/images/releases/2021/without-you.jpg
 
 spotify: https://open.spotify.com/track/6VO7FOoYQ2tjjdecVPlOli
 apple: https://music.apple.com/us/album/without-you-single/1554291555
