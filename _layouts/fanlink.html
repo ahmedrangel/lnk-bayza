@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.artists }} - {{ page.title }}</title>
+    <title>{{ page.title }}</title>
     <!-- Metadatos -->
     <meta charset="utf-8">
     <meta name="theme-color" content="#1d1d1d"/>
@@ -19,13 +19,13 @@
     <meta property="og:image:width" content="300"/>
     <meta property="og:image:height" content="300"/>
     <meta property="og:image:alt" content="{{ page.title }}"/>
-    <meta property="og:description" content="{{ page.artists }}"/>
+    <meta property="og:description" content="by {{ page.artists }}"/>
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image" content="{{ page.image_secure }}"/>
     <meta name="twitter:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" content="{{ page.artists }}"/>
+    <meta name="twitter:description" content="by {{ page.artists }}"/>
     <meta name="twitter:site" content="@bayzamusic"/>
 
     <!-- Recursos -->
