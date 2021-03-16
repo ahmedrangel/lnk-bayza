@@ -13,8 +13,8 @@ spotify: https://open.spotify.com/album/7u9f8veDrtAZWJDdNKzMiK
 soundcloud: https://soundcloud.com/bayza/everything-i-wanted
 youtube: https://youtu.be/IX2VJo9E_Sw
 beatport: https://www.beatport.com/track/everything-i-wanted-original-mix/13602423
-itunes: https://music.apple.com/us/album/everything-i-wanted-single/1512929117?app=itunes
-apple: https://music.apple.com/us/album/everything-i-wanted-single/1512929117?app=music
+itunes: https://music.apple.com/us/album/everything-i-wanted-single/1512929117?app=itunes&ls=1
+apple: https://music.apple.com/us/album/everything-i-wanted-single/1512929117?app=music&ls=1
 deezer: https://www.deezer.com/en/album/147809492
 amazon: https://www.amazon.com/-/es/Bayza/dp/B088HJ2LNZ
 amazon-music: https://music.amazon.com/albums/B088HJ2LNZ
