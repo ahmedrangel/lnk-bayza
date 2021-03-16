@@ -113,3 +113,9 @@ ul.icons {
 .copy-to-clipboard:hover {
   opacity: 100%!important;
 }
+
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
