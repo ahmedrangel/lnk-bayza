@@ -10,10 +10,10 @@ image: http://bayzamusic.com/images/releases/2021/looking-at-you.jpg
 image_secure: https://bayzamusic.com/images/releases/2021/looking-at-you.jpg
 
 spotify: https://open.spotify.com/album/1FeIeewafur1nUMlWQvH5I
-apple: https://music.apple.com/us/album/looking-at-you-single/1552093678
+apple: https://music.apple.com/us/album/looking-at-you-single/1552093678?app=music&ls=1
 soundcloud: https://soundcloud.com/bayza/looking-at-you
 youtube: https://youtu.be/Yd5LZuOyCpg
-itunes:
+itunes: https://music.apple.com/us/album/looking-at-you-single/1552093678?app=itunes&ls=1
 amazon-music: https://music.amazon.com/albums/B08VS82LX5
 amazon: https://www.amazon.com/Looking-At-You-Bayza/dp/B08VS82LX5
 deezer: https://www.deezer.com/en/album/204865582

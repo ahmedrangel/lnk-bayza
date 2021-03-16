@@ -13,8 +13,8 @@ spotify: https://open.spotify.com/track/5aNJ27YbvoNsy4kT8txSlB
 soundcloud: 
 youtube: https://youtu.be/MjaLp6MNm4g
 beatport: 
-itunes: 
-apple: https://music.apple.com/us/album/1523752558?i=1523752560
+itunes: https://music.apple.com/us/album/1523752558?i=1523752560?app=itunes&ls=1
+apple: https://music.apple.com/us/album/1523752558?i=1523752560?app=music&ls=1
 deezer: https://www.deezer.com/en/track/1022970892
 amazon: https://www.amazon.com/dp/B08D5X9L9P/
 amazon-music: https://music.amazon.com/albums/B08D6J76TQ?trackAsin=B08D5X9L9P

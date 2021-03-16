@@ -10,10 +10,10 @@ image: http://bayzamusic.com/images/releases/2020/reborn.jpg
 image_secure: https://bayzamusic.com/images/releases/2020/reborn.jpg
 
 spotify: https://open.spotify.com/track/3POCFD2UIKRvmySfhQvRgU
-apple: https://music.apple.com/album/reborn-single/1535187248
+apple: https://music.apple.com/album/reborn-single/1535187248?app=music&ls=1
 soundcloud: https://soundcloud.com/bayza/reborn
 youtube: https://youtu.be/Uqm00tl0nKQ
-itunes:
+itunes: https://music.apple.com/album/reborn-single/1535187248?app=itunes&ls=1
 amazon-music: https://music.amazon.com/albums/B08KY8ZJV7
 amazon: https://www.amazon.com/No-Guarantee-Bayza/dp/B08KY8ZJV7
 deezer: https://www.deezer.com/en/album/178782202

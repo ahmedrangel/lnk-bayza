@@ -13,8 +13,8 @@ spotify: https://open.spotify.com/album/2Fejxzi2GxOeoCvaF7e3j6
 soundcloud: https://soundcloud.com/bayza/miracle
 youtube: https://youtu.be/-vx3oZ4j4h0
 beatport: https://www.beatport.com/release/miracle/3304325
-itunes: 
-apple: https://music.apple.com/us/album/miracle-single/1517837338
+itunes: https://music.apple.com/us/album/miracle-single/1517837338?app=itunes&ls=1
+apple: https://music.apple.com/us/album/miracle-single/1517837338?app=music&ls=1
 deezer: https://www.deezer.com/en/album/154007702
 amazon: https://www.amazon.com/Miracle-Bayza/dp/B08B1VJ9YK
 amazon-music: https://music.amazon.com/albums/B08B1VJ9YK
