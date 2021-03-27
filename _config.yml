@@ -28,7 +28,7 @@ twitter_username: bayzamusic
 # Build settings
 theme: minima
 plugins:
-  - jekyll-redirect-from
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
