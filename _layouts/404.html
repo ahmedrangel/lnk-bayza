@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404</title>
+
+    <link rel="icon" type="image/png" href="https://bayzamusic.com/images/bayza-logo-black.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://bayzamusic.com/images/bayza-logo-black.png"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"/>
+    <link rel="stylesheet" href="https://bayzamusic.com/css/main.css" />
+    <link rel="stylesheet" href="https://bayzamusic.com/css/emoji.css"/> <!-- https://afeld.github.io/emoji-css/ -->
+    <link rel="stylesheet" href="/css/links.css" />
+  </head>
+<script>
+var allposts = [];  
+function redirectToCorrectPage() {  
+var allposts = [];  
+function redirectToCorrectPage() {
+  console.log("Unable to find page. Trying other URL cases.");
+	{% for post in site.pages %}  
+		allposts.push("{{ post.url }}");  
+	{% endfor %}  
+	var url = window.location.pathname;
+	// strip trailing /
+	if (url.slice(-1) === "/") {  
+		 url = url.slice(0, -1);  
+	}
+	var allpostsUpperCase = allposts.map(function(value) {  
+	  	// strip trailing /
+	  	if (value.slice(-1) === "/") {  
+			value = value.slice(0, -1);  
+	  	}
+		return value.toUpperCase();  
+	});  
+	console.log("Looking for "+url.toUpperCase() + " in "+allpostsUpperCase);
+	var i = allpostsUpperCase.indexOf(url.toUpperCase());  
+	if (i != -1) {  
+		console.log(allposts[i]);  
+		window.location = allposts[i];  
+	}  
+}  
+window.onload = redirectToCorrectPage;
+</script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/cc91b92ca8.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://bayzamusic.com/js/tema.js"></script>
+    <script src="/js/lnk-bayza-ml.js"></script>
+  </body>
+</html>
