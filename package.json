@@ -1,0 +1,22 @@
+{
+  "name": "lnk.bayzamusic.com",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js,.vue --fix --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@nuxtjs/sitemap": "^5.1.0",
+    "nuxt": "^3.10.3"
+  },
+  "dependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "bootstrap": "^5.3.3",
+    "eslint": "^8.57.0",
+    "nuxt-icon": "^0.6.8"
+  }
+}

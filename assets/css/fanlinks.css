@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Circular Std;
+  src: url("/font/CircularStd-Book.woff") format("opentype");
+}
+
+body {
+  background: #191919;
+  font-family: 'Circular Std'!important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg-dark{
+  background: #191919!important
+}
+
+.bg-fanlink {
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(20px) opacity(65%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.copy-to-clipboard {
+  font-size: 1.4rem;
+  top: 16px;
+  right: 16px;
+  background: #030303;
+  border-radius: 5px;
+  opacity: 70%;
+  border: 2px solid #ffffff4a;
+}
+
+.copy-to-clipboard span {
+  padding: 2px 8px;
+}
+
+.copy-to-clipboard:hover, .copy-to-clipboard:focus {
+  opacity: 100%;
+}
