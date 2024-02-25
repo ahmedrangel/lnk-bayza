@@ -20,6 +20,14 @@ if (!data.value) {
 
 const fanlink = data.value;
 
+useSeoMeta({
+  title: `${fanlink.title} by ${fanlink.artists} | Fanlink`
+});
+
+useHead({
+  link: [{ rel: "canonical", href: SITE.main_url }]
+});
+
 const { $bootstrap, $Tooltip } = useNuxtApp();
 
 const copyToClipboard = () => {
