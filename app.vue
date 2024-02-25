@@ -1,5 +1,6 @@
 <script setup>
 const { $bootstrap } = useNuxtApp();
+
 onMounted(() => {
   $bootstrap.initializeTooltip();
 });
