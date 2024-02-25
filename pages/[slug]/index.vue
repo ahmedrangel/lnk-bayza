@@ -2,7 +2,17 @@
 const { params } = useRoute();
 const { slug } = params;
 
-const fanlink = ref();
+const {data: data} = await useFetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
+
+if (!data.value[slug]) {
+    throw createError({
+      statusCode: 404,
+      message: `Fanlink not found: '${slug}'`,
+      fatal: true
+    });
+  }
+
+const fanlink = data.value[slug];
 
 const { $bootstrap, $Tooltip } = useNuxtApp();
 
@@ -22,18 +32,6 @@ const copyToClipboard = () => {
 };
 
 onMounted(async() => {
-  const data = await $fetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
-
-  if (!data[slug]) {
-    throw createError({
-      statusCode: 404,
-      message: `Fanlink not found: '${slug}'`,
-      fatal: true
-    });
-  }
-
-  fanlink.value = data[slug];
-
   addEventListener("mouseup", (e) => {
     const element = document.querySelector(".copy-to-clipboard");
     const copied_element = document.querySelector(".copied");
