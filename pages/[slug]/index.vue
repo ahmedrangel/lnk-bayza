@@ -19,6 +19,7 @@ if (!data.value) {
 }
 
 const fanlink = data.value;
+console.log(fanlink);
 
 useSeoMeta({
   title: `${fanlink.title} by ${fanlink.artists} | Fanlink`
@@ -110,34 +111,36 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
-    <h5 class="mb-2 position-fixed start-0 bottom-0 d-lg-flex d-none ps-3">
-      <a target="_blank" :href="SITE.main_url">{{ SITE.domain }}</a>
-    </h5>
-    <h6 class="mb-4 pb-3 position-fixed end-0 bottom-0 d-lg-flex d-none pe-3">Follow Bayza</h6>
-    <div class="position-fixed end-0 bottom-0 d-lg-flex d-none">
-      <ul class="mb-2">
-        <li v-for="(el, i) of SITE.external_links" :key="i" class="d-inline-block pe-3">
-          <h5 class="mb-0">
-            <a target="_blank" :href="el.url">
-              <Icon :name="el.icon" />
-            </a>
-          </h5>
-        </li>
-      </ul>
-    </div>
-    <div class="end-0 bottom-0 d-lg-none d-block">
-      <ul class="my-4 p-0 text-center ps-3">
-        <li v-for="(el, i) of SITE.external_links" :key="i" class="d-inline-block pe-3">
-          <h3 class="mb-0">
-            <a target="_blank" :href="el.url">
-              <Icon :name="el.icon" />
-            </a>
-          </h3>
-        </li>
-      </ul>
-      <h4 class="my-4 start-0 d-lg-none d-block text-center">
+    <div :class="`${fanlink.dark ? 'text-dark' : 'text-white'}`">
+      <h5 class="mb-2 position-fixed start-0 bottom-0 d-lg-flex d-none ps-3">
         <a target="_blank" :href="SITE.main_url">{{ SITE.domain }}</a>
-      </h4>
+      </h5>
+      <h6 class="mb-4 pb-3 position-fixed end-0 bottom-0 d-lg-flex d-none pe-3">Follow Bayza</h6>
+      <div class="position-fixed end-0 bottom-0 d-lg-flex d-none">
+        <ul class="mb-2">
+          <li v-for="(el, i) of SITE.external_links" :key="i" class="d-inline-block pe-3">
+            <h5 class="mb-0">
+              <a target="_blank" :href="el.url">
+                <Icon :name="el.icon" />
+              </a>
+            </h5>
+          </li>
+        </ul>
+      </div>
+      <div class="end-0 bottom-0 d-lg-none d-block">
+        <ul class="my-4 p-0 text-center ps-3">
+          <li v-for="(el, i) of SITE.external_links" :key="i" class="d-inline-block pe-3">
+            <h3 class="mb-0">
+              <a target="_blank" :href="el.url">
+                <Icon :name="el.icon" />
+              </a>
+            </h3>
+          </li>
+        </ul>
+        <h4 class="my-4 start-0 d-lg-none d-block text-center">
+          <a target="_blank" :href="SITE.main_url">{{ SITE.domain }}</a>
+        </h4>
+      </div>
     </div>
   </main>
 </template>

@@ -1,17 +1,18 @@
+:root {
+  --bs-dark: #191919;
+  --bs-dark-rgb: 25, 25, 25;
+}
+
 @font-face {
   font-family: "Circular Std";
   src: url("/font/CircularStd-Book.woff") format("opentype");
 }
 
 body {
-  background: #191919;
+  background: var(--bs-dark);
   font-family: 'Circular Std'!important;
   font-weight: normal;
   font-style: normal;
-}
-
-.bg-dark{
-  background: #191919!important
 }
 
 .bg-fanlink {
