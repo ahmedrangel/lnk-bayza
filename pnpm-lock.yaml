@@ -28,6 +28,12 @@ devDependencies:
   nuxt:
     specifier: ^3.10.3
     version: registry.npmjs.org/nuxt@3.10.3(@types/node@20.11.20)(eslint@8.57.0)(typescript@5.3.3)(vite@5.1.4)
+  vue:
+    specifier: ^3.4.19
+    version: 3.4.19(typescript@5.3.3)
+  vue-router:
+    specifier: ^4.3.0
+    version: 4.3.0(vue@3.4.19)
 
 packages:
 
