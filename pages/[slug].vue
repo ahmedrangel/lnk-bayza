@@ -1,6 +1,8 @@
 <script setup>
 const { params } = useRoute();
 const { slug } = params;
+
+
 const data = await $fetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
 
 if (!data[slug]) {
@@ -10,7 +12,7 @@ if (!data[slug]) {
     fatal: true
   });
 }
-const fanlink = data[slug];
+const fanlink = ref();
 
 const { $bootstrap, $Tooltip } = useNuxtApp();
 
@@ -29,7 +31,19 @@ const copyToClipboard = () => {
   }
 };
 
-onMounted(() => {
+onMounted(async() => {
+  const data = await $fetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
+
+  if (!data[slug]) {
+    throw createError({
+      statusCode: 404,
+      message: `Fanlink not found: '${slug}'`,
+      fatal: true
+    });
+  }
+
+  fanlink.value = data[slug];
+
   addEventListener("mouseup", (e) => {
     const element = document.querySelector(".copy-to-clipboard");
     const copied_element = document.querySelector(".copied");
@@ -48,7 +62,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="container">
+  <main class="container" v-if="fanlink">
     <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(' + fanlink.image_secure + ')' }" />
     <div class="d-flex justify-content-center align-items-center py-3">
       <div class="col-lg-4">
