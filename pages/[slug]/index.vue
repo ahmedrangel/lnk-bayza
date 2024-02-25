@@ -2,7 +2,7 @@
 const { params } = useRoute();
 const { slug } = params;
 
-const {data: data} = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug.toLowerCase()).catch(() => null);
+const {data: data} = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug).catch(() => null);
 
 if (!data.value) {
   throw createError({
