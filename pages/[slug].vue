@@ -2,16 +2,6 @@
 const { params } = useRoute();
 const { slug } = params;
 
-
-const data = await $fetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
-
-if (!data[slug]) {
-  throw createError({
-    statusCode: 404,
-    message: `Fanlink not found: '${slug}'`,
-    fatal: true
-  });
-}
 const fanlink = ref();
 
 const { $bootstrap, $Tooltip } = useNuxtApp();
