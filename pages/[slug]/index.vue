@@ -45,21 +45,27 @@ const copyToClipboard = () => {
   }
 };
 
-onMounted(async() => {
-  addEventListener("mouseup", (e) => {
-    const element = document.querySelector(".copy-to-clipboard");
-    const copied_element = document.querySelector(".copied");
-    const instance = $Tooltip.getInstance(copied_element);
-    if (instance) {
-      if (!copied_element.contains(e.target)) {
-        element.style.opacity = "70%";
-        copied_element.classList.add("d-none");
-        instance.dispose();
-      }
-      element.setAttribute("data-bs-original-title", "Copy to clipboard");
-      $bootstrap.initializeTooltip();
+const handleMouseUp = (e) => {
+  const element = document.querySelector(".copy-to-clipboard");
+  const copied_element = document.querySelector(".copied");
+  const instance = $Tooltip.getInstance(copied_element);
+  if (instance) {
+    if (!copied_element.contains(e.target)) {
+      element.style.opacity = "70%";
+      copied_element.classList.add("d-none");
+      instance.dispose();
     }
-  });
+    element.setAttribute("data-bs-original-title", "Copy to clipboard");
+    $bootstrap.initializeTooltip();
+  }
+};
+
+onMounted(() => {
+  addEventListener("mouseup", (e) => { handleMouseUp(e); });
+});
+
+onBeforeUnmount(() => {
+  removeEventListener("mouseup", (e) => { handleMouseUp(e); });
 });
 </script>
 
