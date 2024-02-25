@@ -34,12 +34,12 @@ a:hover {
 
 .copy-to-clipboard {
   font-size: 1.4rem;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   background: #030303;
-  border-radius: 5px;
+  border-radius: 6px;
   opacity: 70%;
-  border: 2px solid #ffffff4a;
+  border: 2px solid #636363;
 }
 
 .copy-to-clipboard span {
@@ -47,5 +47,10 @@ a:hover {
 }
 
 .copy-to-clipboard:hover, .copy-to-clipboard:focus {
-  opacity: 100%;
+  opacity: 100%!important;
+}
+
+.tooltip {
+  --bs-tooltip-bg: rgb(0, 0, 0);
+  --bs-tooltip-color: #fff;
 }
