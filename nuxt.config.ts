@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     "~/assets/css/fanlinks.css"
   ],
   app: {
+    rootId: "app",
+    buildAssetDir: "/_app",
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
