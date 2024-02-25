@@ -2,6 +2,12 @@
 const { params } = useRoute();
 const { slug } = params;
 
+for (const r of redirects) {
+  if (r.slug === slug.toLowerCase()) {
+    await navigateTo(r.url, { external: true });
+  }
+}
+
 const {data: data} = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug).catch(() => null);
 
 if (!data.value) {
@@ -50,7 +56,7 @@ onMounted(async() => {
 </script>
 
 <template>
-  <main class="container">
+  <main v-if="fanlink" class="container">
     <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(' + fanlink.image_secure + ')' }" />
     <div class="d-flex justify-content-center align-items-center py-3">
       <div class="col-lg-4">
