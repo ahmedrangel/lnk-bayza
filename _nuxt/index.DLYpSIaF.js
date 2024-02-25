@@ -1,1 +1,0 @@
-import{w as e,j as n}from"./entry.DBViBqUt.js";import{S as r}from"./site-info.r5UIDq4K.js";const i={__name:"index",async setup(s){let t,a;return[t,a]=e(()=>n(r.main_url+"/fanlinks",{external:!0})),await t,a(),()=>{}}};export{i as default};
