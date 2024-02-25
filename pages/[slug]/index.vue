@@ -101,8 +101,9 @@ onBeforeUnmount(() => {
                   <span class="btn btn-outline-light">Buy</span>
                 </a>
                 <span v-if="(fanlink[p.id + '-buy'] || p.id === 'amazon-music') && fanlink[p.id]" class="mx-1" />
-                <a class="text-white" :href="fanlink[p.id]" target="_blank" :title="`Stream on ${p.name}`">
-                  <span class="btn btn-outline-light">Stream</span>
+                <a class="text-white" :href="fanlink[p.id]" target="_blank" :title="`${ p.id === 'tiktok' ? 'Use Sound' : `Stream on ${p.name}` }`">
+                  <span v-if="p.id === 'tiktok'" class="btn btn-outline-light">Use Sound</span>
+                  <span v-else class="btn btn-outline-light">Stream</span>
                 </a>
               </div>
             </div>
