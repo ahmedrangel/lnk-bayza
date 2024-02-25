@@ -5,12 +5,12 @@ const { slug } = params;
 const {data: data} = await useFetch("https://bayzamusic.com/data/fanlinks.json").catch(() => null);
 
 if (!data.value[slug]) {
-    throw createError({
-      statusCode: 404,
-      message: `Fanlink not found: '${slug}'`,
-      fatal: true
-    });
-  }
+  throw createError({
+    statusCode: 404,
+    message: `Fanlink not found: '${slug}'`,
+    fatal: true
+  });
+}
 
 const fanlink = data.value[slug];
 
@@ -50,7 +50,7 @@ onMounted(async() => {
 </script>
 
 <template>
-  <main class="container" v-if="fanlink">
+  <main class="container">
     <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(' + fanlink.image_secure + ')' }" />
     <div class="d-flex justify-content-center align-items-center py-3">
       <div class="col-lg-4">
