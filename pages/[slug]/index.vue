@@ -19,7 +19,6 @@ if (!data.value) {
 }
 
 const fanlink = data.value;
-console.log(fanlink);
 
 useSeoMeta({
   title: `${fanlink.title} by ${fanlink.artists} | Fanlink`
