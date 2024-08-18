@@ -12,20 +12,20 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
-        lang: "en",
+        "lang": "en",
         "data-bs-theme": "dark"
       },
       meta: [
         { name: "robots", content: "index, follow" }
       ],
-      link : [
+      link: [
         { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
         { rel: "icon", type: "image/png", sizes: "512x512", href: "/android-chrome-512x512.png" },
         { rel: "icon", type: "image/png", sizes: "192x192", href: "/android-chrome-192x192.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#181818" },
+        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#181818" }
       ]
     }
   },
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   ],
   icon: { mode: "svg", serverBundle: "remote" },
   features: {
-    inlineStyles: false,
+    inlineStyles: false
   },
   nitro: {
     prerender: {
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     }
   },
   site: {
-    url: SITE.url,
+    url: SITE.url
   },
   sitemap: {
     xslColumns: [
@@ -65,5 +65,11 @@ export default defineNuxtConfig({
     "/": { sitemap: { priority: 1 } },
     "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } },
     "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
+  },
+  eslint: {
+    config: {
+      autoInit: false,
+      stylistic: true
+    }
   }
 });

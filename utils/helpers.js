@@ -13,5 +13,5 @@ export const platforms = [
   { id: "tidal", image: "tidal.png", name: "Tidal" },
   { id: "vk", image: "vk.png", name: "VKontakte" },
   { id: "napster", image: "napster.png", name: "Napster" },
-  { id: "tiktok", image: "tiktok.png", name: "TikTok" },
+  { id: "tiktok", image: "tiktok.png", name: "TikTok" }
 ];

@@ -8,7 +8,7 @@ for (const r of redirects) {
   }
 }
 
-const {data: data} = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug).catch(() => null);
+const { data: data } = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug).catch(() => null);
 
 if (!data.value) {
   throw createError({
@@ -42,7 +42,7 @@ const copyToClipboard = () => {
   copied_element.classList.remove("d-none");
   const instance = $Tooltip.getInstance(copied_element);
   if (!instance) {
-    new $Tooltip(copied_element, {trigger: "manual"}).show();
+    new $Tooltip(copied_element, { trigger: "manual" }).show();
   }
 };
 
@@ -62,11 +62,11 @@ const handleMouseUp = (e) => {
 };
 
 onMounted(() => {
-  addEventListener("mouseup", (e) => { handleMouseUp(e); });
+  addEventListener("mouseup", e => handleMouseUp(e));
 });
 
 onBeforeUnmount(() => {
-  removeEventListener("mouseup", (e) => { handleMouseUp(e); });
+  removeEventListener("mouseup", e => handleMouseUp(e));
 });
 </script>
 
@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
                   <span class="btn btn-outline-light">Buy</span>
                 </a>
                 <span v-if="(fanlink[p.id + '-buy'] || p.id === 'amazon-music') && fanlink[p.id]" class="mx-1" />
-                <a class="text-white" :href="fanlink[p.id]" target="_blank" :title="`${ p.id === 'tiktok' ? 'Use Sound' : `Stream on ${p.name}` }`">
+                <a class="text-white" :href="fanlink[p.id]" target="_blank" :title="`${p.id === 'tiktok' ? 'Use Sound' : `Stream on ${p.name}`}`">
                   <span v-if="p.id === 'tiktok'" class="btn btn-outline-light">Use Sound</span>
                   <span v-else class="btn btn-outline-light">Stream</span>
                 </a>
