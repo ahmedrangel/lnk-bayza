@@ -18,10 +18,11 @@ if (!data.value) {
   });
 }
 
-const fanlink = data.value;
+const info = data.value;
+const fanlink = info.fanlinks;
 
 useSeoMeta({
-  title: `${fanlink.title} by ${fanlink.artists} | Fanlink`
+  title: `${info.title} by ${info.artists} | Fanlink`
 });
 
 useHead({
@@ -70,13 +71,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <main v-if="fanlink" class="container">
-    <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(' + fanlink.image_secure + ')' }" />
+  <main v-if="info" class="container">
+    <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(https://bayzamusic.com' + info.image + ')' }" />
     <div class="d-flex justify-content-center align-items-center py-3">
       <div class="col-lg-4">
         <div class="card overflow-hidden border-0 bg-dark">
           <div class="position-relative">
-            <img class="img-fluid w-100" :src="fanlink.image_secure">
+            <img class="img-fluid w-100" :src="'https://bayzamusic.com' + info.image">
             <div class="p-0 position-absolute copy-to-clipboard d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="Copy to clipboard" @click="copyToClipboard()">
               <span>
                 <Icon class="copied d-none position-absolute top-50 start-50 translate-middle" name="fa6-solid:check" style="font-size: 26px; color: #1cc88a;" data-bs-toggle="tooltip-copied" data-bs-placement="bottom" title="Copied!" />
