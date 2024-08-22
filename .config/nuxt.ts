@@ -1,7 +1,8 @@
-import { SITE } from "../utils/site-info.js";
+import { SITE } from "../app/utils/site-info.js";
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-08-18",
+  future: { compatibilityVersion: 4 },
+  compatibilityDate: "2024-08-22",
   css: [
     "bootstrap/dist/css/bootstrap.min.css",
     "~/assets/css/fanlinks.css"
@@ -25,7 +26,8 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#181818" }
+        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#181818" },
+        { rel: "preconnect", href: "https://bayzamusic.com" }
       ]
     }
   },
@@ -55,6 +57,7 @@ export default defineNuxtConfig({
     url: SITE.url
   },
   sitemap: {
+    sources: ["/api/__sitemap"],
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },

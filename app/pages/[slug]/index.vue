@@ -21,12 +21,29 @@ if (!data.value) {
 const info = data.value;
 const fanlink = info.fanlinks;
 
+const title = `${info.title} by ${info.artists} | Fanlink`;
+const image = `https://bayzamusic.com${info.image}`;
+
 useSeoMeta({
-  title: `${info.title} by ${info.artists} | Fanlink`
+  title: title,
+  description: "Bayza Fanlink",
+  ogUrl: SITE.url + "/" + slug.toLowerCase(),
+  ogType: "website",
+  ogSiteName: "Bayza",
+  ogDescription: "Bayza Fanlink",
+  ogImage: image,
+  ogImageWidth: 500,
+  ogImageHeight: 500,
+  ogImageAlt: title,
+  twitterCard: "summary",
+  twitterTitle: title,
+  twitterDescription: "Bayza Fanlink",
+  twitterImage: image,
+  twitterSite: "@bayzamusic"
 });
 
 useHead({
-  link: [{ rel: "canonical", href: SITE.main_url }]
+  link: [{ rel: "canonical", href: SITE.url + "/" + slug.toLowerCase() }]
 });
 
 const { $bootstrap, $Tooltip } = useNuxtApp();
@@ -72,12 +89,12 @@ onBeforeUnmount(() => {
 
 <template>
   <main v-if="info" class="container">
-    <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(https://bayzamusic.com' + info.image + ')' }" />
+    <div class="bg-fanlink h-100 position-fixed start-0 end-0" :style="{ 'background-image': 'url(' + image + ')' }" />
     <div class="d-flex justify-content-center align-items-center py-3">
       <div class="col-lg-4">
         <div class="card overflow-hidden border-0 bg-dark">
           <div class="position-relative">
-            <img class="img-fluid w-100" :src="'https://bayzamusic.com' + info.image">
+            <img class="img-fluid w-100" :src="image">
             <div class="p-0 position-absolute copy-to-clipboard d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="Copy to clipboard" @click="copyToClipboard()">
               <span>
                 <Icon class="copied d-none position-absolute top-50 start-50 translate-middle" name="fa6-solid:check" style="font-size: 26px; color: #1cc88a;" data-bs-toggle="tooltip-copied" data-bs-placement="bottom" title="Copied!" />
