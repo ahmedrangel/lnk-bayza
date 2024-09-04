@@ -103,8 +103,8 @@ onBeforeUnmount(() => {
             </div>
           </div>
           <div class="p-3 text-center">
-            <h5>{{ fanlink.title }}</h5>
-            <h6 class="mb-0">{{ fanlink.artists }}</h6>
+            <h5>{{ info.title }}</h5>
+            <h6 class="mb-0">{{ info.artists }}</h6>
           </div>
           <template v-for="(p, i) of platforms" :key="i">
             <div v-if="fanlink[p.id]" class="d-flex justify-content-center align-items-center border-top">
