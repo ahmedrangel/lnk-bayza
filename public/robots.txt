@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lnk.bayzamusic.com/sitemap.xml
+Sitemap: https://lnk.bayza.music/sitemap.xml

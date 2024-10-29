@@ -1,1 +1,1 @@
-lnk.bayzamusic.com
+lnk.bayza.music

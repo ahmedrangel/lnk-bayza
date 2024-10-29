@@ -1,7 +1,7 @@
 export const SITE = {
-  url: "https://lnk.bayzamusic.com",
-  main_url: "https://bayzamusic.com",
-  domain: "bayzamusic.com",
+  url: "https://lnk.bayza.music",
+  main_url: "https://bayza.music",
+  domain: "bayza.music",
   external_links: [
     {
       name: "Spotify",

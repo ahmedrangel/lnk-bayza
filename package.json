@@ -1,5 +1,5 @@
 {
-  "name": "lnk.bayzamusic.com",
+  "name": "lnk.bayza.music",
   "private": true,
   "scripts": {
     "build": "nuxt build",

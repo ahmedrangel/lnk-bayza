@@ -8,7 +8,7 @@ for (const r of redirects) {
   }
 }
 
-const { data: data } = await useFetch("https://bayzamusic.com/api/fanlinks/" + slug).catch(() => null);
+const { data: data } = await useFetch("https://bayza.music/api/fanlinks/" + slug).catch(() => null);
 
 if (!data.value) {
   throw createError({
@@ -22,7 +22,7 @@ const info = data.value;
 const fanlink = info.fanlinks;
 
 const title = `${info.title} by ${info.artists} | Fanlink`;
-const image = `https://bayzamusic.com${info.image}`;
+const image = `https://bayza.music${info.image}`;
 
 useSeoMeta({
   title: title,
